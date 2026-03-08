@@ -15,6 +15,7 @@ void main() {
             "remove",
             "stop"
     };
+    System.out.println("Welcome! Type 'help' to see commands.");
 
     while (true){
         System.out.flush();
