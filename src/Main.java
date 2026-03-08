@@ -12,7 +12,8 @@ void main() {
             "help",
             "list",
             "add",
-            "remove"
+            "remove",
+            "stop"
     };
 
     while (true){
@@ -21,6 +22,7 @@ void main() {
         String command = in.nextLine().toLowerCase();
         //If command is 'stop' then breaks out of loop
         if (command.equals("stop")){
+            System.out.println("Stopping...");
             break;
         }
         boolean isValidCommand = false;
@@ -43,8 +45,9 @@ void main() {
                     }
                     if (input[1].equals("remove")){
                         int index = Integer.parseInt(input[0]) - 1;
+                        String removedItem = todoList.get(index);
                         todoList.remove(index);
-                        System.out.println("Successfully removed \"" + todoList.get(index) + "\" from the list.");
+                        System.out.println("Successfully removed \"" + removedItem + "\" from the list.");
                     }
                 }
                 else {
